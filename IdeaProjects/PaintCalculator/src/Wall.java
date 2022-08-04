@@ -1,15 +1,30 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Wall {
-    float width;
-    float height;
+    private float width;
+    private float height;
+    private ArrayList<Window> windows;
+    private ArrayList<Door> doors;
 
-    public Wall(float inputWidth, float inputHeight) {
-        width = inputWidth;
-        height = inputHeight;
+    public Wall(float inputWidth, float inputHeight, ArrayList<Window> windows, ArrayList<Door> doors) {
+        this.width = inputWidth;
+        this.height = inputHeight;
+        this.windows = windows;
+        this.doors = doors;
     }
 
-    public float calculateArea() {
-        return width * height;
+    public float getArea() {
+        float wallArea = width * height;
+        for (Window w : windows) {
+            float windowArea = w.getArea();
+            wallArea -= windowArea;
+        }
+        for (Door d : doors) {
+            float doorArea = d.getArea();
+            wallArea -= doorArea;
+        }
+        return wallArea;
     }
-
 
 }
