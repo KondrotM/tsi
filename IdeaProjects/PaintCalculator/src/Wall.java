@@ -15,6 +15,10 @@ public class Wall {
     }
 
     public float getArea() {
+        /**
+         * Returns area based on default wall area, minus any doors or windows.
+         * @return area of wall
+         */
         float wallArea = width * height;
         for (Window w : windows) {
             float windowArea = w.getArea();
