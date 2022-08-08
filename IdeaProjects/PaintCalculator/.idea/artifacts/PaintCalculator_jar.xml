@@ -1,11 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="PaintCalculator:jar">
+  <artifact name="PaintCalculator:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/PaintCalculator_jar</output-path>
-    <root id="archive" name="PaintCalculator.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/src/build/META-INF/MANIFEST.MF" />
+    <root id="root">
+      <element id="archive" name="PaintCalculator.jar">
+        <element id="module-output" name="PaintCalculator" />
       </element>
-      <element id="module-output" name="PaintCalculator" />
     </root>
   </artifact>
 </component>

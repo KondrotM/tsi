@@ -8,7 +8,7 @@ import static java.lang.System.in;
 
 public class Main {
 
-    /*
+    /**
     A program created to calculate the paint needed to cover the walls in a house.
      */
 
@@ -17,6 +17,7 @@ public class Main {
     - [x] Create cost calculator
     - [x] Round paint needed
     - [ ] Use inheritance within wall objects
+    - [ ] Implement area calculation for non-rectangle walls
     - [ ] Create a GUI
     - [ ] Error handling for negative values
      */

@@ -24,27 +24,7 @@ public class PaintCalculator {
     final static float[] defaultWindowDims = {0.63F, 0.89F};
     final static float[] defaultDoorDims = {0.63F, 0.89F};
 
-    public float calculatePrice(float paint) {
-        /**
-         * Calculates price from user input
-         * @param paint volume of paint used on walls
-         * @return final price in GBP
-         */
 
-        Scanner scan = new Scanner(in);
-        float bucketVolume = Input.getInputFloat(scan, "What size paint can are you able to purchase? (L)");
-        float bucketPrice = Input.getInputFloat(scan, "How much does each paint can cost? (GBP)");
-
-        final DecimalFormat df = new DecimalFormat("0");
-        df.setRoundingMode(RoundingMode.UP);
-        int bucketsUsed = Integer.parseInt(df.format(paint/bucketVolume));
-
-        System.out.println("--------------------");
-        System.out.println("Buckets needed: " + bucketsUsed);
-        float price = bucketPrice * bucketsUsed;
-
-        return price;
-    }
     public float calculatePaintVolume() {
         /**
          * A wizard to guide the user to configure the dimensions of each wall.
@@ -76,11 +56,9 @@ public class PaintCalculator {
                         "Use default window size.",
                         "Configure"
                 ));
-
                 ArrayList<String> identifiers = new ArrayList<>(Arrays.asList(
                         "1", "2"
                 ));
-
                 String inp = Input.getInputChoice(scan, choices, identifiers);
                 int input = Integer.parseInt(inp);
 
@@ -147,5 +125,27 @@ public class PaintCalculator {
         float paint = totalWallArea * ratioPaintArea * coats;
 
         return paint;
+    }
+
+    public float calculatePrice(float paint) {
+        /**
+         * Calculates price from user input
+         * @param paint volume of paint used on walls
+         * @return final price in GBP
+         */
+
+        Scanner scan = new Scanner(in);
+        float bucketVolume = Input.getInputFloat(scan, "What size paint can are you able to purchase? (L)");
+        float bucketPrice = Input.getInputFloat(scan, "How much does each paint can cost? (GBP)");
+
+        final DecimalFormat df = new DecimalFormat("0");
+        df.setRoundingMode(RoundingMode.UP);
+        int bucketsUsed = Integer.parseInt(df.format(paint/bucketVolume));
+
+        System.out.println("--------------------");
+        System.out.println("Buckets needed: " + bucketsUsed);
+        float price = bucketPrice * bucketsUsed;
+
+        return price;
     }
 }
