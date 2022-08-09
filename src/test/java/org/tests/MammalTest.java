@@ -17,7 +17,7 @@ public class MammalTest {
         // breeding depends on random chance,
         // so we are testing for a balanced distribution
         int successfulMates = 0;
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 1000; i++) {
             mam.breed(mate);
             Mammal baby = mam.birth();
             if (baby != null) {
@@ -25,7 +25,7 @@ public class MammalTest {
             }
         }
         // 10% delta
-        Assertions.assertEquals(successfulMates, 300, 50);
+        Assertions.assertEquals(successfulMates, 600, 100);
     }
 
     @Test

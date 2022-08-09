@@ -19,6 +19,7 @@ public class AnimalTest {
 
     @Test
     public void test_animal_move_long() {
+        an.setPositionLong(0);
 
         Assertions.assertEquals(0, an.getPosition()[1]);
 
@@ -29,6 +30,7 @@ public class AnimalTest {
 
     @Test
     public void test_animal_move_lat() {
+        an.setPositionLat(0);
 
         Assertions.assertEquals(0, an.getPosition()[1]);
 
@@ -39,6 +41,8 @@ public class AnimalTest {
 
     @Test
     public void test_animal_move_lat_long() {
+        an.setLocation(0,0);
+
         Assertions.assertEquals(0, an.getPosition()[0]);
         Assertions.assertEquals(0, an.getPosition()[1]);
 
