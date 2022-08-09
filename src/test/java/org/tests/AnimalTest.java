@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class AnimalTest {
-    // Non-abstract animal class called
-    Animal an = new Bat();
 
     @Test
     public void test_animal_alive() {
 
+        // Non-abstract animal class called
+        Animal an = new Bat();
         Assertions.assertTrue(an.getAlive());
         an.die();
         Assertions.assertFalse(an.getAlive());
@@ -19,6 +19,8 @@ public class AnimalTest {
 
     @Test
     public void test_animal_move_long() {
+        // Non-abstract animal class called
+        Animal an = new Bat();
         an.setPositionLong(0);
 
         Assertions.assertEquals(0, an.getPosition()[1]);
@@ -30,6 +32,8 @@ public class AnimalTest {
 
     @Test
     public void test_animal_move_lat() {
+        // Non-abstract animal class called
+        Animal an = new Bat();
         an.setPositionLat(0);
 
         Assertions.assertEquals(0, an.getPosition()[1]);
@@ -41,6 +45,8 @@ public class AnimalTest {
 
     @Test
     public void test_animal_move_lat_long() {
+        // Non-abstract animal class called
+        Animal an = new Bat();
         an.setLocation(0,0);
 
         Assertions.assertEquals(0, an.getPosition()[0]);
@@ -54,6 +60,8 @@ public class AnimalTest {
 
     @Test
     public void test_animal_sleep() {
+        // Non-abstract animal class called
+        Animal an = new Bat();
         Assertions.assertTrue(an.getAwake());
         an.sleep();
         Assertions.assertFalse(an.getAwake());
@@ -63,6 +71,8 @@ public class AnimalTest {
 
     @Test
     public void test_animal_poop() {
+        // Non-abstract animal class called
+        Animal an = new Bat();
         Assertions.assertTrue(an.poop());
     }
 
