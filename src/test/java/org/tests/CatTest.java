@@ -5,10 +5,10 @@ import org.example.Pigeon;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class CatTest {
+public class CatTest {
 
     @Test
-    void test_get_cat_killer() {
+    public void test_get_cat_killer() {
         Cat testCat = new Cat();
         Pigeon prey = new Pigeon();
 
@@ -19,7 +19,7 @@ class CatTest {
     }
 
     @Test
-    void test_cat_eat() {
+    public void test_cat_eat() {
         Cat cat = new Cat();
 
         Assertions.assertTrue(cat.eat("water"));

@@ -4,17 +4,17 @@ import org.example.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class BirdTest {
+public class BirdTest {
     Bird b = new Pigeon();
 
     @Test
-    void test_bird_breathing() {
+    public void test_bird_breathing() {
         Assertions.assertEquals("carbon dioxide",b.breathe("oxygen"));
         Assertions.assertEquals(null,b.breathe("hydrogen"));
     }
 
     @Test
-    void test_bird_breeding() {
+    public void test_bird_breeding() {
         Bird mate = new Pigeon();
 
         // breeding depends on random chance,
@@ -32,7 +32,7 @@ class BirdTest {
     }
 
     @Test
-    void test_mammal_cross_breeding() {
+    public void test_mammal_cross_breeding() {
         Mammal mate = new Cat();
         Assertions.assertEquals(false, b.breed(mate));
     }

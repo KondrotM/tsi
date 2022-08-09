@@ -4,9 +4,9 @@ import org.example.Penguin;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class PenguinTest {
+public class PenguinTest {
     @Test
-    void test_penguin_eat() {
+    public void test_penguin_eat() {
 
         Penguin p = new Penguin();
         Assertions.assertTrue(p.eat("water"));

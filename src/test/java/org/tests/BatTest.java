@@ -4,19 +4,19 @@ import org.example.Bat;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class BatTest {
+public class BatTest {
     Bat bat = new Bat();
 
     @Test
-    void test_bat_eat(){
+    public void test_bat_eat(){
         Assertions.assertTrue(bat.eat("vegetables"));
         Assertions.assertTrue(bat.eat("water"));
         Assertions.assertFalse(bat.eat("meat"));
     }
 
     @Test
-    void test_bat_flight(){
-        Assertions.assertTrue(bat.flight());
+    public void test_bat_take_flight(){
+        Assertions.assertTrue(bat.takeFlight());
     }
 
 
