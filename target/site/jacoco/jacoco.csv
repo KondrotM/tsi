@@ -1,9 +1,8 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Animals,org.example,Main,17,0,0,0,5,0,2,0,2,0
-Animals,org.example,Pigeon,26,3,6,0,10,1,7,1,4,1
+Animals,org.example,Pigeon,0,29,0,6,0,11,0,8,0,5
 Animals,org.example,Bat,17,20,2,4,5,8,4,4,3,2
 Animals,org.example,Mammal,3,72,0,8,2,21,0,8,0,4
-Animals,org.example,Bird,64,11,6,2,19,4,5,3,2,2
+Animals,org.example,Bird,3,72,0,8,2,21,0,8,0,4
 Animals,org.example,Cat,0,32,0,4,0,12,0,6,0,4
 Animals,org.example,Animal,36,121,1,1,13,40,4,19,3,19
-Animals,org.example,Penguin,17,0,4,0,6,0,4,0,2,0
+Animals,org.example,Penguin,0,17,0,4,0,6,0,4,0,2
