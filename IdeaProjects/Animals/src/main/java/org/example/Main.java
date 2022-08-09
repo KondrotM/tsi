@@ -2,6 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Penguin p = new Penguin();
+        System.out.println(p.getClass().getName());
+        System.out.println(p.getName());
+
     }
 }

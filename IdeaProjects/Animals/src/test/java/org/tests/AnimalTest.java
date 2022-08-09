@@ -24,7 +24,7 @@ public class AnimalTest {
 
         an.move(0, 2.5F);
 
-        Assertions.assertEquals(1.5F, an.getPosition()[0]);
+        Assertions.assertEquals(2.5F, an.getPosition()[1]);
     }
 
     @Test

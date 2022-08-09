@@ -1,6 +1,7 @@
 package org.example;
 
-public class Penguin extends Bird{
+public class Penguin extends Bird {
+
     @Override
     public boolean eat(String food) {
        if (food.equals("water")) {

@@ -30,11 +30,12 @@ public class Bat extends Mammal implements Flying{
 
     @Override
     public boolean flight() {
-        return true;
+        if (isFlying) { return true; } else { return false; }
     }
 
     @Override
     public boolean landing() {
+        isFlying = false;
         return true;
     }
 }
