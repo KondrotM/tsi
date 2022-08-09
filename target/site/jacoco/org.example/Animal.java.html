@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Animal.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Animals</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">Animal.java</span></div><h1>Animal.java</h1><pre class="source lang-java linenums">package org.example;
+
+public abstract class Animal {
+
+    // Chance that breeding leads to birth.
+    // This number requires professional evaluation.
+<span class="fc" id="L7">    public static float chanceOfConception = 0.4F;</span>
+    private boolean isAlive;
+    private boolean isAwake;
+    private float positionLat;
+    private float positionLong;
+
+    private String name;
+
+
+    private boolean pregnant;
+    private Animal animalBaby;
+
+<span class="fc" id="L19">    public Animal() {</span>
+<span class="fc" id="L20">        this.isAlive = true;</span>
+<span class="fc" id="L21">        this.isAwake = true;</span>
+<span class="fc" id="L22">        this.positionLat = 0;</span>
+<span class="fc" id="L23">        this.positionLong = 0;</span>
+
+<span class="fc" id="L25">        this.pregnant = false;</span>
+<span class="fc" id="L26">        this.animalBaby = null;</span>
+
+        // Gives default name
+<span class="fc" id="L29">        String orgName = getClass().getName();</span>
+<span class="fc" id="L30">        this.name = orgName.substring(orgName.lastIndexOf(&quot;.&quot;) + 1);</span>
+<span class="fc" id="L31">    }</span>
+
+<span class="nc" id="L33">    public Animal(String name) {</span>
+<span class="nc" id="L34">        this.isAlive = true;</span>
+<span class="nc" id="L35">        this.isAwake = true;</span>
+<span class="nc" id="L36">        this.positionLat = 0;</span>
+<span class="nc" id="L37">        this.positionLong = 0;</span>
+
+<span class="nc" id="L39">        this.pregnant = false;</span>
+<span class="nc" id="L40">        this.animalBaby = null;</span>
+
+<span class="nc" id="L42">        this.name = name;</span>
+<span class="nc" id="L43">    }</span>
+    public abstract boolean eat(String food);
+    // breeds with partner
+    public abstract boolean breed(Animal partner);
+    public abstract Animal birth();
+    public abstract String breathe(String molecule);
+
+    public String getName() {
+<span class="nc" id="L51">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="nc" id="L55">        this.name = name;</span>
+<span class="nc" id="L56">    }</span>
+
+    public boolean isPregnant() {
+<span class="fc" id="L59">        return pregnant;</span>
+    }
+
+    public void setPregnant(boolean pregnant) {
+<span class="fc" id="L63">        this.pregnant = pregnant;</span>
+<span class="fc" id="L64">    }</span>
+
+    public Animal getAnimalBaby() {
+<span class="fc" id="L67">        return animalBaby;</span>
+    }
+
+    public void setAnimalBaby(Animal animalBaby) {
+<span class="fc" id="L71">        this.animalBaby = animalBaby;</span>
+<span class="fc" id="L72">    }</span>
+
+    public boolean getAlive() {
+<span class="fc" id="L75">        return isAlive;</span>
+    }
+
+    public void setLocation(float lat, float lon) {
+<span class="fc" id="L79">        this.positionLat = lat;</span>
+<span class="fc" id="L80">        this.positionLong = lon;</span>
+<span class="fc" id="L81">    }</span>
+
+
+    public boolean getAwake() {
+<span class="fc" id="L85">        return this.isAwake;</span>
+    }
+    public void move(float lat, float lon) {
+<span class="fc" id="L88">        this.positionLat += lat;</span>
+<span class="fc" id="L89">        this.positionLong += lon;</span>
+
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">        if (this.pregnant) {</span>
+<span class="nc" id="L92">            this.animalBaby.move(lat, lon);</span>
+        }
+<span class="fc" id="L94">    }</span>
+
+
+
+    public float[] getPosition() {
+<span class="fc" id="L99">        return new float[]{this.positionLat, this.positionLong};</span>
+    }
+
+    public void sleep() {
+<span class="fc" id="L103">        this.isAwake = false;</span>
+<span class="fc" id="L104">    }</span>
+
+    public void awake() {
+<span class="fc" id="L107">        this.isAwake = true;</span>
+<span class="fc" id="L108">    }</span>
+
+    /* Spicy sleep function, only works if each animal has its own thread
+    public void sleep(int time) throws InterruptedException {
+        Object sleep = new Object();
+        sleep.wait(time);
+    } */
+
+    public boolean poop(){
+<span class="fc" id="L117">        return true;</span>
+    };
+
+    public void die(){
+<span class="fc" id="L121">        isAlive = false;</span>
+<span class="fc" id="L122">    }</span>
+
+    public float getPositionLat() {
+<span class="fc" id="L125">        return positionLat;</span>
+    }
+
+    public void setPositionLat(float positionLat) {
+<span class="fc" id="L129">        this.positionLat = positionLat;</span>
+<span class="fc" id="L130">    }</span>
+
+    public float getPositionLong() {
+<span class="fc" id="L133">        return positionLong;</span>
+    }
+
+    public void setPositionLong(float positionLong) {
+<span class="fc" id="L137">        this.positionLong = positionLong;</span>
+<span class="fc" id="L138">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

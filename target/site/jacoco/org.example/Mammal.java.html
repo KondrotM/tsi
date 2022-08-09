@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Mammal.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Animals</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">Mammal.java</span></div><h1>Mammal.java</h1><pre class="source lang-java linenums">package org.example;
+
+import java.security.SecureRandom;
+
+<span class="fc" id="L5">public abstract class Mammal extends Animal {</span>
+    @Override
+    public String breathe(String molecule) {
+<span class="fc bfc" id="L8" title="All 2 branches covered.">        if (molecule.equals(&quot;oxygen&quot;)){</span>
+<span class="fc" id="L9">            return &quot;carbon dioxide&quot;;</span>
+        } else {
+            // i can't breathe this
+<span class="fc" id="L12">            return null;</span>
+        }
+    }
+
+    @Override
+    public boolean breed(Animal partner) {
+        // Ensures both animals are in the same part of the animal kingdom
+//        if (partner.getClass().getSuperclass().getName().equals(this.getClass().getSuperclass().getName())) {
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if(partner instanceof Mammal) {</span>
+            try {
+<span class="fc" id="L22">                Mammal baby = this.getClass().getDeclaredConstructor().newInstance();</span>
+
+                // baby location is the same as the parent
+<span class="fc" id="L25">                baby.setLocation(this.getPositionLat(), this.getPositionLong());</span>
+
+                // chance for pregnancy
+                // Secure random implementation, as recommended by SonarCloud
+<span class="fc" id="L29">                SecureRandom random = new SecureRandom();</span>
+<span class="fc" id="L30">                byte bytes[] = new byte[20];</span>
+<span class="fc" id="L31">                random.nextBytes(bytes);</span>
+
+<span class="fc bfc" id="L33" title="All 2 branches covered.">                if (random.nextFloat() &gt; chanceOfConception) {</span>
+                    // parent is now pregnant
+<span class="fc" id="L35">                    this.setPregnant(true);</span>
+<span class="fc" id="L36">                    this.setAnimalBaby(baby);</span>
+                }
+                // breeding has occurred
+<span class="fc" id="L39">                return true;</span>
+
+<span class="nc" id="L41">            } catch (Exception e) {</span>
+<span class="nc" id="L42">                return false;</span>
+                // catch breeding exception
+            }
+        } else {
+<span class="fc" id="L46">            return false;</span>
+            // i can't breed with this animal
+        }
+    }
+
+    @Override
+    public Mammal birth() {
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (this.isPregnant()) {</span>
+<span class="fc" id="L54">            this.setPregnant(false);</span>
+<span class="fc" id="L55">            Mammal baby = (Mammal) this.getAnimalBaby();</span>
+
+<span class="fc" id="L57">            this.setAnimalBaby(null);</span>
+<span class="fc" id="L58">            return baby;</span>
+        }
+<span class="fc" id="L60">        return null;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
