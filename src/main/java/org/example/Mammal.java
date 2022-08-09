@@ -1,5 +1,7 @@
 package org.example;
 
+import java.security.SecureRandom;
+
 public abstract class Mammal extends Animal {
     @Override
     public String breathe(String molecule) {
@@ -14,7 +16,8 @@ public abstract class Mammal extends Animal {
     @Override
     public boolean breed(Animal partner) {
         // Ensures both animals are in the same part of the animal kingdom
-        if (partner.getClass().getSuperclass().getName().equals(this.getClass().getSuperclass().getName())) {
+//        if (partner.getClass().getSuperclass().getName().equals(this.getClass().getSuperclass().getName())) {
+        if(partner instanceof Mammal) {
             try {
                 Mammal baby = this.getClass().getDeclaredConstructor().newInstance();
 
@@ -22,9 +25,13 @@ public abstract class Mammal extends Animal {
                 baby.setLocation(this.getPositionLat(), this.getPositionLong());
 
                 // chance for pregnancy
-                if (Math.random() > chanceOfConception) {
+                // Secure random implementation, as recommended by SonarCloud
+                SecureRandom random = new SecureRandom();
+                byte bytes[] = new byte[20];
+                random.nextBytes(bytes);
+
+                if (random.nextFloat() > chanceOfConception) {
                     // parent is now pregnant
-//                    System.out.println("Conceptualization has occurred");
                     this.setPregnant(true);
                     this.setAnimalBaby(baby);
                 }

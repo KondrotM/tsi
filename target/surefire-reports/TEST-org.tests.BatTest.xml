@@ -61,6 +61,6 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="org.tests.BatTest" name="org.tests.BatTest.test_bat_flight" time="0"/>
   <testcase classname="org.tests.BatTest" name="org.tests.BatTest.test_bat_eat" time="0"/>
+  <testcase classname="org.tests.BatTest" name="org.tests.BatTest.test_bat_flight" time="0"/>
 </testsuite>
