@@ -16,7 +16,6 @@ public abstract class Bird extends Animal {
     @Override
     public boolean breed(Animal partner) {
         // Ensures both animals are in the same part of the animal kingdom
-//        if (partner.getClass().getSuperclass().getName().equals(this.getClass().getSuperclass().getName())) {
         if(partner instanceof Bird) {
             try {
                 Bird baby = this.getClass().getDeclaredConstructor().newInstance();
@@ -26,7 +25,7 @@ public abstract class Bird extends Animal {
 
                 // Secure random implementation, as recommended by SonarCloud
                 SecureRandom random = new SecureRandom();
-                byte bytes[] = new byte[20];
+                byte[] bytes = new byte[20];
                 random.nextBytes(bytes);
 
                 if (random.nextFloat() > chanceOfConception) {
