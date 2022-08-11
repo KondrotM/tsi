@@ -1,8 +1,10 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Animals,org.example,Pigeon,0,29,0,6,0,11,0,8,0,5
-Animals,org.example,Bat,12,25,2,4,3,10,3,5,2,3
-Animals,org.example,Mammal,3,72,0,8,2,21,0,8,0,4
-Animals,org.example,Bird,3,72,0,8,2,21,0,8,0,4
-Animals,org.example,Cat,0,32,0,4,0,12,0,6,0,4
-Animals,org.example,Animal,36,121,1,1,13,40,4,19,3,19
-Animals,org.example,Penguin,0,17,0,4,0,6,0,4,0,2
+AnimalKingdom,com.tsi.AnimalKingdom.animals.birds,Penguin,0,17,0,4,0,6,0,4,0,2
+AnimalKingdom,com.tsi.AnimalKingdom.animals.birds,Pigeon,6,60,3,9,3,22,3,10,0,7
+AnimalKingdom,com.tsi.AnimalKingdom.animals.birds,Bird,3,72,0,8,2,21,0,8,0,4
+AnimalKingdom,com.tsi.AnimalKingdom.animals.mammals,Bat,6,58,3,7,3,22,3,10,0,8
+AnimalKingdom,com.tsi.AnimalKingdom.animals.mammals,Cat,0,32,0,4,0,12,0,6,0,4
+AnimalKingdom,com.tsi.AnimalKingdom.animals.mammals,Mammal,8,76,2,8,4,24,2,9,1,5
+AnimalKingdom,com.tsi.AnimalKingdom,AnimalKingdomApplication,7,3,0,0,3,1,2,1,2,1
+AnimalKingdom,com.tsi.AnimalKingdom.animals,Animal,14,148,2,2,4,50,3,20,1,20
+AnimalKingdom,com.tsi.AnimalKingdom.animals,Main,16,0,0,0,5,0,2,0,2,0

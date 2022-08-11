@@ -1,7 +1,10 @@
-org\tests\MammalTest.class
-org\tests\BirdTest.class
-org\tests\PigeonTest.class
-org\tests\AnimalTest.class
-org\tests\CatTest.class
-org\tests\PenguinTest.class
-org\tests\BatTest.class
+com\tsi\AnimalKingdom\tests\cucumber\RunCucumberTest.class
+com\tsi\AnimalKingdom\tests\BirdTest.class
+com\tsi\AnimalKingdom\tests\cucumber\MyBowl.class
+com\tsi\AnimalKingdom\tests\PigeonTest.class
+com\tsi\AnimalKingdom\tests\CatTest.class
+com\tsi\AnimalKingdom\tests\PenguinTest.class
+com\tsi\AnimalKingdom\tests\BatTest.class
+com\tsi\AnimalKingdom\tests\MammalTest.class
+com\tsi\AnimalKingdom\AnimalKingdomApplicationTests.class
+com\tsi\AnimalKingdom\tests\AnimalTest.class
