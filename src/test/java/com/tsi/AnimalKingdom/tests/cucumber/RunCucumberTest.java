@@ -1,4 +1,5 @@
 package com.tsi.AnimalKingdom.tests.cucumber;
+/*
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +10,11 @@ import org.junit.runner.RunWith;
 
 //        glue = "src/test/java/com/tsi/davis/gareth/cucumber/cats/FeedCatStepDefs.java" )
 
+*/
 class MyBowl {
+}
+/*
+
     String bowlState;
     
     public MyBowl() {
@@ -53,3 +58,5 @@ public class RunCucumberTest {
     }
 
 }
+
+ */

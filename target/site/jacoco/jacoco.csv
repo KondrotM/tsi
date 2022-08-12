@@ -1,10 +1,12 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+AnimalKingdom,com.tsi.AnimalKingdom.zoo,Zoo,85,0,0,0,18,0,6,0,6,0
 AnimalKingdom,com.tsi.AnimalKingdom.animals.birds,Penguin,0,17,0,4,0,6,0,4,0,2
 AnimalKingdom,com.tsi.AnimalKingdom.animals.birds,Pigeon,6,60,3,9,3,22,3,10,0,7
 AnimalKingdom,com.tsi.AnimalKingdom.animals.birds,Bird,3,72,0,8,2,21,0,8,0,4
 AnimalKingdom,com.tsi.AnimalKingdom.animals.mammals,Bat,6,58,3,7,3,22,3,10,0,8
 AnimalKingdom,com.tsi.AnimalKingdom.animals.mammals,Cat,0,32,0,4,0,12,0,6,0,4
 AnimalKingdom,com.tsi.AnimalKingdom.animals.mammals,Mammal,8,76,2,8,4,24,2,9,1,5
-AnimalKingdom,com.tsi.AnimalKingdom,AnimalKingdomApplication,7,3,0,0,3,1,2,1,2,1
-AnimalKingdom,com.tsi.AnimalKingdom.animals,Animal,14,148,2,2,4,50,3,20,1,20
+AnimalKingdom,com.tsi.AnimalKingdom.spring,AnimalKingdomApplication,109,0,2,0,30,0,9,0,8,0
+AnimalKingdom,com.tsi.AnimalKingdom.spring,HelloWorldController,5,0,0,0,2,0,2,0,2,0
+AnimalKingdom,com.tsi.AnimalKingdom.animals,Animal,22,148,2,2,5,50,4,20,2,20
 AnimalKingdom,com.tsi.AnimalKingdom.animals,Main,16,0,0,0,5,0,2,0,2,0

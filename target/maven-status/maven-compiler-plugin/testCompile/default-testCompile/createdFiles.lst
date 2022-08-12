@@ -1,10 +1,10 @@
-com\tsi\AnimalKingdom\tests\cucumber\RunCucumberTest.class
 com\tsi\AnimalKingdom\tests\BirdTest.class
 com\tsi\AnimalKingdom\tests\cucumber\MyBowl.class
 com\tsi\AnimalKingdom\tests\PigeonTest.class
 com\tsi\AnimalKingdom\tests\CatTest.class
+com\tsi\AnimalKingdom\tests\spring\CheckHTTPReseponse.class
+com\tsi\AnimalKingdom\tests\spring\AnimalKingdomApplicationTests.class
 com\tsi\AnimalKingdom\tests\PenguinTest.class
 com\tsi\AnimalKingdom\tests\BatTest.class
 com\tsi\AnimalKingdom\tests\MammalTest.class
-com\tsi\AnimalKingdom\AnimalKingdomApplicationTests.class
 com\tsi\AnimalKingdom\tests\AnimalTest.class

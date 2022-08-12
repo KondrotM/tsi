@@ -182,4 +182,13 @@ public abstract class Animal {
     public void setPositionLong(float positionLong) {
         this.positionLong = positionLong;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"name\"= \"" + this.name +
+                "\", \"alive\"=\"" + this.isAlive +
+                "\", \"child\"=\"" + this.animalBaby +
+                "\"}";
+    }
 }

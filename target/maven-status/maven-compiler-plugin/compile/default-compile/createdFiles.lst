@@ -1,10 +1,12 @@
-com\tsi\AnimalKingdom\animals\birds\Bird.class
 com\tsi\AnimalKingdom\animals\mammals\Cat.class
-com\tsi\AnimalKingdom\animals\birds\Penguin.class
-com\tsi\AnimalKingdom\animals\birds\Pigeon.class
+com\tsi\AnimalKingdom\spring\HelloWorldController.class
+com\tsi\AnimalKingdom\spring\AnimalKingdomApplication.class
 com\tsi\AnimalKingdom\animals\interfaces\Flying.class
 com\tsi\AnimalKingdom\animals\Main.class
-com\tsi\AnimalKingdom\AnimalKingdomApplication.class
+com\tsi\AnimalKingdom\zoo\Zoo.class
 com\tsi\AnimalKingdom\animals\Animal.class
 com\tsi\AnimalKingdom\animals\mammals\Bat.class
 com\tsi\AnimalKingdom\animals\mammals\Mammal.class
+com\tsi\AnimalKingdom\animals\birds\Bird.class
+com\tsi\AnimalKingdom\animals\birds\Penguin.class
+com\tsi\AnimalKingdom\animals\birds\Pigeon.class
